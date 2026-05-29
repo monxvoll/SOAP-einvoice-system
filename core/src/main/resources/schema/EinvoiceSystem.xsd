@@ -1,0 +1,106 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://einvoice.com/soap/gen"
+           targetNamespace="http://einvoice.com/soap/gen" elementFormDefault="qualified">
+
+    <!-- Plantilla de request -->
+    <xs:element name="Employee">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ID" type="xs:string"/>
+                <xs:element name="Name" type="xs:string"/>
+                <xs:element name="phoneNumber" type="xs:string"/>
+                <xs:element name="email" type="xs:string"/>
+                <xs:element name="productiveActivity" type="xs:string"/>
+                <!-- Agregar más datos aquí -->
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Plantilla de response -->
+    <xs:element name="Customer">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ID" type="xs:string"/>
+                <xs:element name="Name" type="xs:string"/>
+                <xs:element name="email" type="xs:string"/>
+                <xs:element name="phoneNumber" type="xs:string"/>
+                <!-- Agregar más datos aquí -->
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+     <xs:element name="Product">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ID" type="xs:string"/>
+                <xs:element name="name" type="xs:string"/>
+                <xs:element name="unitPrice" type="xs:string"/>
+                <!-- Agregar más datos aquí -->
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+     <xs:element name="Einvoice">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="tns:Employee"/>
+                <xs:element ref="tns:Customer"/>
+                <xs:element ref="tns:Product" maxOccurs="unbounded" minOccurs="0"/>
+                <xs:element name="quantities" type="xs:int" maxOccurs="unbounded" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="RegisterPurchaseResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="PDF" type="xs:base64Binary"/>
+                <xs:element name="emailCheck" type="xs:boolean"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    
+
+    <xs:element name="CustomerListRequest">
+        <xs:complexType>
+            <xs:sequence/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="CustomerListResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="tns:Customer" maxOccurs="unbounded" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="ProductListRequest">
+        <xs:complexType>
+            <xs:sequence/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="ProductListResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="tns:Product" maxOccurs="unbounded" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="EmployeeListRequest">
+        <xs:complexType>
+            <xs:sequence/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="EmployeeListResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="tns:Employee" maxOccurs="unbounded" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
