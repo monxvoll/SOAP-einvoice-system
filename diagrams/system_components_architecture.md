@@ -32,6 +32,7 @@ graph TD
     SOAP_EP -- "Validates & Parses XML" --> Service
     Service -- "1. Requests PDF creation" --> PDF
     Service -- "2. Sends PDF via Email" --> Mail
+    PDF -. "Provides generated file" .-> Mail
     Mail -- "SMTP Protocol" --> SMTP
 ```
 
