@@ -8,23 +8,23 @@ This diagram shows the structural components of the DIAN Electronic Invoicing sy
 graph TD
     %% Client Side
     subgraph Client [Client Side]
-        UI[Web Browser UI<br/>(HTML/JS Web Form)]
+        UI["Web Browser UI<br/>(HTML/JS Web Form)"]
     end
 
     %% Server Side
     subgraph Server [DIAN Server - Spring Boot]
-        SOAP_EP[SOAP Endpoint<br/>(@Endpoint)]
-        Service[Invoice Business Service]
+        SOAP_EP["SOAP Endpoint<br/>(@Endpoint)"]
+        Service["Invoice Business Service"]
         
         subgraph Utilities [Utilities]
-            PDF[PDF Generator<br/>(iTextPDF)]
-            Mail[Email Sender<br/>(Spring Mail)]
+            PDF["PDF Generator<br/>(iTextPDF)"]
+            Mail["Email Sender<br/>(Spring Mail)"]
         end
     end
 
     %% External Systems
     subgraph External [External Systems]
-        SMTP[SMTP Server<br/>(Gmail/Outlook)]
+        SMTP["SMTP Server<br/>(Gmail/Outlook)"]
     end
 
     %% Relationships
