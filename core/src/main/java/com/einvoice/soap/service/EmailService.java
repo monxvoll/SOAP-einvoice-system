@@ -1,8 +1,11 @@
 package com.einvoice.soap.service;
 
+import com.einvoice.soap.gen.Customer;
+import com.einvoice.soap.gen.Einvoice;
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
@@ -14,46 +17,44 @@ public class EmailService {
     @Autowired
     private JavaMailSender mailSender;
 
-    /**
-     * Sends an email with a PDF file attached to it.
-     * This method is responsible for constructing a complex email message
-     * that can hold both standard text and file attachments.
-     *
-     * @param to            The recipient's email address (e.g., the customer's
-     *                      email)
-     * @param subject       The main subject line of the email
-     * @param text          The body content or message of the email
-     * @param pdfAttachment The generated PDF invoice represented as a byte array
-     * @param filename      The exact name the attached file will have (e.g.,
-     *                      "invoice_123.pdf")
-     * @throws MessagingException If there is a problem building the email or
-     *                            connecting to the SMTP server
-     */
-    public void sendInvoiceEmail(String to, String subject, String text, byte[] pdfAttachment, String filename)
-            throws MessagingException {
-        // MimeMessage is a special email object that supports advanced features like
-        // attachments
-        MimeMessage message = mailSender.createMimeMessage();
+    @Autowired
+    private PdfService pdfService;
 
-        // The 'true' flag indicates that this is a multipart message, which is required
-        // when sending attachments
+    @Value("${spring.mail.username:}")
+    private String fromAddress;
+
+    public void sendInvoiceEmail(String subject, String text, Einvoice einvoice) throws MessagingException {
+        String to = customerEmailFromRequest(einvoice);
+        byte[] pdfBytes = pdfService.generateInvoicePdf(einvoice);
+        String attachmentName = pdfFileName(einvoice);
+
+        MimeMessage message = mailSender.createMimeMessage();
         MimeMessageHelper helper = new MimeMessageHelper(message, true);
 
-        // Set the basic email details: recipient, subject, and body text
         helper.setTo(to);
+        if (fromAddress != null && !fromAddress.isBlank()) {
+            helper.setFrom(fromAddress);
+        }
         helper.setSubject(subject);
         helper.setText(text);
+        helper.addAttachment(attachmentName, new ByteArrayResource(pdfBytes), "application/pdf");
 
-        // Check if the PDF byte array is valid and not empty
-        // Then convert the raw bytes into a Spring resource so it can be attached to
-        // the email
-        if (pdfAttachment != null && pdfAttachment.length > 0) {
-            ByteArrayResource pdfResource = new ByteArrayResource(pdfAttachment);
-            helper.addAttachment(filename, pdfResource);
-        }
-
-        // Finally, tell the JavaMailSender to dispatch the fully constructed email over
-        // the network
         mailSender.send(message);
+    }
+
+    private static String customerEmailFromRequest(Einvoice einvoice) {
+        Customer customer = einvoice.getCustomer();
+        if (customer == null || customer.getEmail() == null || customer.getEmail().isBlank()) {
+            throw new IllegalArgumentException("El cliente debe incluir un email válido en el request SOAP");
+        }
+        return customer.getEmail().trim();
+    }
+
+    private static String pdfFileName(Einvoice einvoice) {
+        Customer customer = einvoice.getCustomer();
+        if (customer != null && customer.getID() != null && !customer.getID().isBlank()) {
+            return "factura-" + customer.getID() + ".pdf";
+        }
+        return "factura.pdf";
     }
 }
