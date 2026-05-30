@@ -1,0 +1,82 @@
+[
+  {
+    "ID": "FE-001",
+    "name": "Licencia anual facturación electrónica DIAN",
+    "unitPrice": "2400000"
+  },
+  {
+    "ID": "FE-002",
+    "name": "Implementación inicial proveedor tecnológico",
+    "unitPrice": "8500000"
+  },
+  {
+    "ID": "FE-003",
+    "name": "Capacitación equipo facturación (8 horas)",
+    "unitPrice": "1200000"
+  },
+  {
+    "ID": "FE-004",
+    "name": "Paquete 1000 documentos electrónicos",
+    "unitPrice": "450000"
+  },
+  {
+    "ID": "FE-005",
+    "name": "Certificado firma digital persona jurídica",
+    "unitPrice": "380000"
+  },
+  {
+    "ID": "FE-006",
+    "name": "Soporte mensual mesa de ayuda FE",
+    "unitPrice": "650000"
+  },
+  {
+    "ID": "FE-007",
+    "name": "Integración ERP con servicio DIAN",
+    "unitPrice": "5200000"
+  },
+  {
+    "ID": "FE-008",
+    "name": "Validación previa XML factura electrónica",
+    "unitPrice": "85000"
+  },
+  {
+    "ID": "FE-009",
+    "name": "Documento soporte adquisiciones (DSA)",
+    "unitPrice": "120000"
+  },
+  {
+    "ID": "FE-010",
+    "name": "Nota crédito electrónica estándar",
+    "unitPrice": "35000"
+  },
+  {
+    "ID": "FE-011",
+    "name": "Nota débito electrónica estándar",
+    "unitPrice": "35000"
+  },
+  {
+    "ID": "FE-012",
+    "name": "Nomina electrónica paquete 50 empleados",
+    "unitPrice": "980000"
+  },
+  {
+    "ID": "FE-013",
+    "name": "Evento RADIAN acuse recibo factura",
+    "unitPrice": "15000"
+  },
+  {
+    "ID": "FE-014",
+    "name": "Reporte cumplimiento resolución 000042",
+    "unitPrice": "290000"
+  },
+  {
+    "ID": "FE-015",
+    "name": "Almacenamiento XML 12 meses (hasta 5 GB)",
+    "unitPrice": "720000"
+  },
+  {
+    "ID": "FE-016",
+    "name": "Consultoría habilitación facturador autorizado",
+    "unitPrice": "3100000"
+  }
+]

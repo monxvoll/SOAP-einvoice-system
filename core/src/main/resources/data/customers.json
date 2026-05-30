@@ -1,0 +1,68 @@
+[
+  {
+    "ID": "900123456-7",
+    "Name": "Comercializadora Andina SAS",
+    "email": "facturacion@andina.demo.co",
+    "phoneNumber": "+57 601 5550101"
+  },
+  {
+    "ID": "800234567-1",
+    "Name": "Distribuidora del Caribe Ltda",
+    "email": "contabilidad@caribe.demo.co",
+    "phoneNumber": "+57 605 5550202"
+  },
+  {
+    "ID": "901345678-2",
+    "Name": "Inversiones Pacífico SAS",
+    "email": "felectronica@pacifico.demo.co",
+    "phoneNumber": "+57 602 5550303"
+  },
+  {
+    "ID": "890456789-3",
+    "Name": "Agroindustrial Llanos SA",
+    "email": "facturas@llanos.demo.co",
+    "phoneNumber": "+57 608 5550404"
+  },
+  {
+    "ID": "900567890-4",
+    "Name": "Tecnología Andina DIAN Demo",
+    "email": "soporte@tecnologia.demo.co",
+    "phoneNumber": "+57 601 5550505"
+  },
+  {
+    "ID": "811678901-5",
+    "Name": "Constructora Horizonte SAS",
+    "email": "cartera@horizonte.demo.co",
+    "phoneNumber": "+57 604 5550606"
+  },
+  {
+    "ID": "900789012-6",
+    "Name": "Salud Integral Bogotá",
+    "email": "facturacion@saludintegral.demo.co",
+    "phoneNumber": "+57 601 5550707"
+  },
+  {
+    "ID": "890890123-7",
+    "Name": "Editorial Sabana Ltda",
+    "email": "ventas@sabana.demo.co",
+    "phoneNumber": "+57 601 5550808"
+  },
+  {
+    "ID": "901901234-8",
+    "Name": "Logística Express Colombia",
+    "email": "fe@logisticaexpress.demo.co",
+    "phoneNumber": "+57 601 5550909"
+  },
+  {
+    "ID": "800012345-9",
+    "Name": "Minimercado El Poblado",
+    "email": "admin@elpoblado.demo.co",
+    "phoneNumber": "+57 604 5551010"
+  },
+  {
+    "ID": "900112233-0",
+    "Name": "Consultores Tributarios DIAN",
+    "email": "contacto@tributarios.demo.co",
+    "phoneNumber": "+57 601 5551111"
+  }
+]

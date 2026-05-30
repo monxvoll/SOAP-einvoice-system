@@ -1,0 +1,79 @@
+[
+  {
+    "ID": "1012345678",
+    "Name": "María Fernanda López",
+    "phoneNumber": "+57 300 1110001",
+    "email": "mlopez@dian.demo.co",
+    "productiveActivity": "Facturación electrónica - ventas"
+  },
+  {
+    "ID": "1023456789",
+    "Name": "Carlos Andrés Ruiz",
+    "phoneNumber": "+57 310 1110002",
+    "email": "cruiz@dian.demo.co",
+    "productiveActivity": "Validación documentos soporte DIAN"
+  },
+  {
+    "ID": "1034567890",
+    "Name": "Laura Patricia Gómez",
+    "phoneNumber": "+57 320 1110003",
+    "email": "lgomez@dian.demo.co",
+    "productiveActivity": "Atención contribuyente facturación"
+  },
+  {
+    "ID": "1045678901",
+    "Name": "Jorge Iván Martínez",
+    "phoneNumber": "+57 301 1110004",
+    "email": "jmartinez@dian.demo.co",
+    "productiveActivity": "Implementación software facturación"
+  },
+  {
+    "ID": "1056789012",
+    "Name": "Ana Lucía Herrera",
+    "phoneNumber": "+57 311 1110005",
+    "email": "aherrera@dian.demo.co",
+    "productiveActivity": "Capacitación resolución facturación"
+  },
+  {
+    "ID": "1067890123",
+    "Name": "Diego Alejandro Vargas",
+    "phoneNumber": "+57 321 1110006",
+    "email": "dvargas@dian.demo.co",
+    "productiveActivity": "Soporte técnico proveedor tecnológico"
+  },
+  {
+    "ID": "1078901234",
+    "Name": "Sandra Milena Castro",
+    "phoneNumber": "+57 302 1110007",
+    "email": "scastro@dian.demo.co",
+    "productiveActivity": "Radicación facturas electrónicas"
+  },
+  {
+    "ID": "1089012345",
+    "Name": "Ricardo Esteban Peña",
+    "phoneNumber": "+57 312 1110008",
+    "email": "rpena@dian.demo.co",
+    "productiveActivity": "Auditoría cumplimiento FE"
+  },
+  {
+    "ID": "1090123456",
+    "Name": "Claudia Marcela Ríos",
+    "phoneNumber": "+57 322 1110009",
+    "email": "crios@dian.demo.co",
+    "productiveActivity": "Gestión notas crédito y débito"
+  },
+  {
+    "ID": "1101234567",
+    "Name": "Felipe Santiago Muñoz",
+    "phoneNumber": "+57 303 1110010",
+    "email": "fmunoz@dian.demo.co",
+    "productiveActivity": "Integración API DIAN demo"
+  },
+  {
+    "ID": "1112345670",
+    "Name": "Paola Andrea Jiménez",
+    "phoneNumber": "+57 313 1110011",
+    "email": "pjimenez@dian.demo.co",
+    "productiveActivity": "Monitoreo eventos RADIAN"
+  }
+]
