@@ -8,6 +8,9 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.ws.config.annotation.EnableWs;
 import org.springframework.ws.config.annotation.WsConfigurerAdapter;
 import org.springframework.ws.transport.http.MessageDispatcherServlet;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+import org.springframework.web.filter.CorsFilter;
 import org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition;
 import org.springframework.xml.xsd.SimpleXsdSchema;
 import org.springframework.xml.xsd.XsdSchema;
@@ -24,19 +27,19 @@ public class WebServiceConfig extends WsConfigurerAdapter {
         return new ServletRegistrationBean<>(servlet, "/ws/*");
     }
 
-    @Bean(name = "ejemplo")
-    public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema ejemploSchema) {
+    @Bean(name = "einvoice")
+    public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema einvoiceSchema) {
         DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
-        wsdl11Definition.setPortTypeName("EjemploPort");
+        wsdl11Definition.setPortTypeName("EinvoicePort");
         wsdl11Definition.setLocationUri("/ws");
         wsdl11Definition.setTargetNamespace("http://einvoice.com/soap/gen");
-        wsdl11Definition.setSchema(ejemploSchema);
+        wsdl11Definition.setSchema(einvoiceSchema);
         return wsdl11Definition;
     }
 
     @Bean
-    public XsdSchema ejemploSchema() {
-        return new SimpleXsdSchema(new ClassPathResource("schema/plantilla.xsd"));
+    public XsdSchema einvoiceSchema() {
+        return new SimpleXsdSchema(new ClassPathResource("schema/EinvoiceSystem.xsd"));
     }
 
     @Bean
