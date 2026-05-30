@@ -1,7 +1,5 @@
 # 💾 WINMAC OS 1.0 - E-INVOICE SYSTEM
 ----------------------------------------------------------------------
-> "The power of tomorrow's electronic invoicing, today."
-
 Welcome to the **WinMac OS** Electronic Invoicing (DIAN) Platform. 
 A system designed to bridge the robust architecture of SOAP web services 
 with a nostalgic, high-productivity retro desktop interface.
