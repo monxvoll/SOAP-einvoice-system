@@ -6,13 +6,13 @@ Welcome to the **WinMac OS** Electronic Invoicing (DIAN) Platform.
 A system designed to bridge the robust architecture of SOAP web services 
 with a nostalgic, high-productivity retro desktop interface.
 
-## 🗂️ SYSTEM DIRECTORY
+##  SYSTEM DIRECTORY
 ----------------------------------------------------------------------
 - `[DIR] core/`      : Java Spring Boot Backend (SOAP 1.1)
 - `[DIR] non-core/`  : Vanilla JS Frontend (Retro Desktop UI)
 - `[DIR] docs/`      : API Documentation & Postman Collections
 
-## ⚙️ TECHNICAL SPECIFICATIONS
+##  TECHNICAL SPECIFICATIONS
 ----------------------------------------------------------------------
 ### BACKEND (Server)
 - **Framework:** Spring Boot / Spring Web Services
@@ -27,7 +27,7 @@ with a nostalgic, high-productivity retro desktop interface.
 - **Aesthetic:** Early 90s GUI (Windows 3.1 / Mac OS System 7 blend)
 - **Features:** Window management, Retro Toast notifications, Pixel-perfect styling
 
-## 🚀 BOOT SEQUENCE
+##  BOOT SEQUENCE
 ----------------------------------------------------------------------
 To initialize the system locally, follow these steps:
 
@@ -46,17 +46,11 @@ python3 -m http.server 3000
 ```
 Then navigate to `http://localhost:3000` in your web browser.
 
-## 📦 MODULES
+##  MODULES
 ----------------------------------------------------------------------
-* **👥 EMPLEADOS:** Select the active vendor/employee for the session.
-* **🧾 FACTURACIÓN DIAN:** Create detailed electronic invoices conforming to DIAN standard formats.
-* **🗃️ CATÁLOGO:** Browse available products and registered customers from the database.
-
-## 🎨 DESIGN PHILOSOPHY
-----------------------------------------------------------------------
-*We believe enterprise software doesn't have to be boring.* 
-By utilizing a classic `#f9b100` and `#333431` color palette, alongside the `VT323` pixel font, WinMac OS provides a comfortable, distraction-free environment that increases user focus and reduces modern web fatigue.
-
+* **EMPLEADOS:** Select the active vendor/employee for the session.
+* **FACTURACIÓN DIAN:** Create detailed electronic invoices conforming to DIAN standard formats.
+* **CATÁLOGO:** Browse available products and registered customers from the database.
 ----------------------------------------------------------------------
 **(C) 2026 WinMac Soft Inc. All Rights Reserved.**
 *"It is now safe to turn off your computer."*
