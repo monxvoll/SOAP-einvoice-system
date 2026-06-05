@@ -116,8 +116,10 @@ function parseProducts(xmlDoc) {
 }
 
 // Window Utilities
-function createOverlay() {
+function createOverlay(id) {
+  if (id && document.getElementById(id)) return null;
   const overlay = document.createElement('div');
+  if (id) overlay.id = id;
   overlay.className = 'window-overlay';
   overlay.addEventListener('click', (e) => {
     if (e.target === overlay) closeOverlay(overlay);
@@ -158,7 +160,8 @@ function createWindow(title, icon, width) {
 
 // 1. EMPLOYEE SELECTOR WINDOW
 async function openEmployeeWindow() {
-  const overlay = createOverlay();
+  const overlay = createOverlay('overlay-employee');
+  if (!overlay) return;
   const win = createWindow('Empleados — Selector', '', '520px');
 
   const body = document.createElement('div');
@@ -227,7 +230,8 @@ async function openEmployeeWindow() {
 
 // 2. INVOICE FORM WINDOW (DIAN)
 async function openInvoiceWindow() {
-  const overlay = createOverlay();
+  const overlay = createOverlay('overlay-invoice');
+  if (!overlay) return;
   const win = createWindow('Facturación Electrónica DIAN', '', '720px');
 
   // Toolbar
@@ -549,7 +553,8 @@ function escapeXml(str) {
 
 // 3. CATALOG WINDOW (Products + Clients)
 async function openCatalogWindow() {
-  const overlay = createOverlay();
+  const overlay = createOverlay('overlay-catalog');
+  if (!overlay) return;
   const win = createWindow('Catálogo — Productos y Clientes', '', '750px');
 
   // Tabs
