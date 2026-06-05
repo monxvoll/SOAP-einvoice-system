@@ -36,7 +36,7 @@ public class EmailService {
             helper.setFrom(fromAddress);
         }
         helper.setSubject(subject);
-        helper.setText(text);
+        helper.setText(text, true);
         helper.addAttachment(attachmentName, new ByteArrayResource(pdfBytes), "application/pdf");
 
         mailSender.send(message);
